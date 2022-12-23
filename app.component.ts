@@ -10,28 +10,6 @@ export class AppComponent {
   result = '';
   operation = '';
 
-  onClick0() {
-    this.operation = this.operation + '0';
-    this.doEvaluation();
-  }
-  onClick1() { this.operation = this.operation + '1';
-    this.doEvaluation();
-  }
-  onClick2() { this.operation = this.operation + '2';
-    this.doEvaluation();
-  }
-  onClick3() { this.operation = this.operation + '3'; }
-  onClick4() { this.operation = this.operation + '4'; }
-  onClick5() { this.operation = this.operation + '5'; }
-  onClick6() { this.operation = this.operation + '6'; }
-  onClick7() { this.operation = this.operation + '7'; }
-  onClick8() { this.operation = this.operation + '8'; }
-  onClick9() { this.operation = this.operation + '9'; }
-
-  newOperation(newOperation) {
-    if ( this.validate() == false ) { return }
-    this.operation = this.operation + newOperation;
-  }
   onClickPlus()     { this.newOperation('+'); }
   onClickMinus()    { this.newOperation('-'); }
   onClickMultiply() { this.newOperation('*'); }
@@ -39,6 +17,54 @@ export class AppComponent {
 
   doEvaluation() {
     this.result = eval(this.operation);
+  }
+
+  onClick0() {
+    this.operation = this.operation + '0';
+    this.doEvaluation();
+  }
+  onClick1() {
+    this.operation = this.operation + '1';
+    this.doEvaluation();
+  }
+  onClick2() {
+    this.operation = this.operation + '2';
+    this.doEvaluation();
+  }
+  onClick3() {
+    this.operation = this.operation + '3';
+    this.doEvaluation();
+  }
+  onClick4() {
+    this.operation = this.operation + '4';
+    this.doEvaluation();
+  }
+  onClick5() {
+    this.operation = this.operation + '5';
+    this.doEvaluation();
+  }
+  onClick6() {
+    this.operation = this.operation + '6';
+    this.doEvaluation();
+  }
+  onClick7() {
+    this.operation = this.operation + '7';
+    this.doEvaluation();
+  }
+  onClick8() {
+    this.operation = this.operation + '8';
+    this.doEvaluation();
+  }
+  onClick9() {
+    this.operation = this.operation + '9';
+    this.doEvaluation();
+  }
+
+  newOperation(newOperation) {
+    if ( this.validate() == false ) {
+      return;
+    }
+    this.operation = this.operation + newOperation;
   }
 
   validate() {
@@ -63,5 +89,4 @@ export class AppComponent {
       this.operation = this.operation.substring(0, length-1 );
     }
   }
-
 }
